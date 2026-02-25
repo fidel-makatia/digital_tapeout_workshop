@@ -1,0 +1,34 @@
+# Simulation outputs
+tb/*.out
+tb/*.vcd
+
+# Synthesis outputs
+outputs/netlist.v
+outputs/netlist.json
+outputs/synth_report.txt
+outputs/*.log
+
+# PnR outputs
+outputs/floorplan.def
+outputs/routed.def
+outputs/routed_netlist.v
+outputs/route.guide
+outputs/route_drc.rpt
+outputs/maze.log
+
+# GDS and verification
+outputs/chip.gds
+outputs/extracted.spice
+outputs/drc_report.txt
+outputs/lvs_report.txt
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
