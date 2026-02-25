@@ -29,7 +29,7 @@ module program_rom (
     //
     // Assembly:
     //   0x00: LDA  1        ; acc = 1
-    //   0x01: STA  0x20     ; store limit counter target (5) setup
+    //   0x01: STA  0x00     ; store to mem[0] (unused, demo of STA)
     //   0x02: OUT           ; output acc to GPIO
     //   0x03: INC           ; acc = acc + 1
     //   0x04: SUB  6        ; acc = acc - 6 (check if acc > 5)

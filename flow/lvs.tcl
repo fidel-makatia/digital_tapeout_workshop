@@ -9,7 +9,7 @@
 puts "Running LVS comparison..."
 
 # Compare extracted SPICE netlist from layout vs gate-level netlist
-lvs "outputs/extracted.spice soc_top" \
+lvs "outputs/extracted.spice soc_top_flat" \
     "outputs/routed_netlist.v soc_top" \
     $::env(PDK_ROOT)/sky130A/libs.tech/netgen/sky130A_setup.tcl \
     outputs/lvs_report.txt

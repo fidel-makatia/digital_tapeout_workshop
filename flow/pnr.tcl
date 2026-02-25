@@ -59,6 +59,13 @@ detailed_route \
     -bottom_routing_layer met1 \
     -top_routing_layer met5
 
+# ---- Filler cells ----
+filler_placement -prefix FILL \
+    sky130_fd_sc_hd__fill_1 \
+    sky130_fd_sc_hd__fill_2 \
+    sky130_fd_sc_hd__fill_4 \
+    sky130_fd_sc_hd__fill_8
+
 # ---- Post-route optimization ----
 estimate_parasitics -global_routing
 

@@ -1,0 +1,50 @@
+yaml_version: 6
+
+project:
+  title: "8-bit Accumulator CPU SoC"
+  author: "Fidel Makatia"
+  discord: ""
+  description: "Tiny 8-bit accumulator microcontroller with 21-instruction ISA, 32-word ROM, 32-byte RAM, and GPIO"
+  language: "Verilog"
+  clock_hz: 5000000
+
+  tiles: "1x2"
+  top_module: "tt_um_fidel_makatia_digital_tapeout"
+
+  source_files:
+    - "tt_um_fidel_makatia_digital_tapeout.v"
+    - "soc_top.v"
+    - "alu.v"
+    - "control.v"
+    - "program_rom.v"
+    - "regfile.v"
+    - "gpio.v"
+
+pinout:
+  ui:
+    - "gpio_in[0]"
+    - "gpio_in[1]"
+    - "gpio_in[2]"
+    - "gpio_in[3]"
+    - "gpio_in[4]"
+    - "gpio_in[5]"
+    - "gpio_in[6]"
+    - "gpio_in[7]"
+  uo:
+    - "gpio_out[0]"
+    - "gpio_out[1]"
+    - "gpio_out[2]"
+    - "gpio_out[3]"
+    - "gpio_out[4]"
+    - "gpio_out[5]"
+    - "gpio_out[6]"
+    - "gpio_out[7]"
+  uio:
+    - "halted (output)"
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""

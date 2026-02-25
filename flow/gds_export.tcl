@@ -29,7 +29,7 @@ gds write outputs/chip.gds
 extract all
 ext2spice lvs
 ext2spice
-mv soc_top_flat.spice outputs/extracted.spice
+file rename -force soc_top_flat.spice outputs/extracted.spice
 
 puts ""
 puts "============================================================"

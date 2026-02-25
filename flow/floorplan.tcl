@@ -33,6 +33,25 @@ initialize_floorplan \
 # VDD and VSS stripes
 make_tracks
 
+# ---- Power Distribution Network ----
+add_global_connection -net VDD -pin_pattern "VPWR" -power
+add_global_connection -net VSS -pin_pattern "VGND" -ground
+add_global_connection -net VDD -pin_pattern "VPB"  -power
+add_global_connection -net VSS -pin_pattern "VNB"  -ground
+
+set_voltage_domain -power VDD -ground VSS
+
+define_pdn_grid -name core_grid -pins {met4 met5}
+
+add_pdn_stripe -grid core_grid -layer met1 -width 0.48 -followpins
+add_pdn_stripe -grid core_grid -layer met4 -width 1.6 -spacing 2 -pitch 40 -offset 0
+add_pdn_stripe -grid core_grid -layer met5 -width 1.6 -spacing 2 -pitch 40 -offset 0
+
+add_pdn_connect -grid core_grid -layers {met1 met4}
+add_pdn_connect -grid core_grid -layers {met4 met5}
+
+pdngen
+
 # ---- Place pins ----
 place_pins -hor_layers met3 -ver_layers met2
 
