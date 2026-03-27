@@ -12,8 +12,8 @@ A complete 3-session workshop that takes participants from RTL to GDS using **10
 
 An 8-bit accumulator-based microcontroller with:
 - **21 instructions** (arithmetic, logic, memory, branching, I/O)
-- **256 bytes** of data RAM
-- **256 x 16-bit** instruction ROM (hard-coded program)
+- **32 bytes** of data RAM
+- **32 x 16-bit** instruction ROM (hard-coded program)
 - **8-bit GPIO** (input + output)
 - **3-stage FSM** pipeline (Fetch → Decode → Execute)
 - Target: **SKY130 130nm CMOS**, ≤ 5 MHz clock
@@ -74,7 +74,7 @@ iverilog -V
 
 ### Run All Tests
 ```bash
-git clone https://github.com/YOUR_USERNAME/digital_tapeout_workshop.git
+git clone https://github.com/fidel-makatia/digital_tapeout_workshop.git
 cd digital_tapeout_workshop
 make sim
 ```
